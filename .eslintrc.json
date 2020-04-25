@@ -1,0 +1,32 @@
+{
+  /**
+   * ESLint: http://eslint.org/docs/user-guide/configuring
+   */
+
+  // "env:" supplies predefined global variables
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "mocha": true,
+    "mongo": true
+  },
+  "globals": {
+    "supertest": true,
+    "expect": true
+  },
+  // our configuration extends the recommended base configuration
+  "extends": ["eslint:recommended", "prettier"],
+  // define the type of file `script` or `module` for ES6 Modules
+  "parserOptions": {
+    "sourceType": "script",
+    "ecmaVersion": 2018
+  },
+  //ESLint rules: Severity Levels: off = 0 | warn = 1 | error = 2
+  "rules": {
+    "eqeqeq": "error", //prefer strict equality `===`
+    "no-console": "warn", //allows but warn about console like `console.log()`
+    "no-unused-vars": "warn", //warns about unused variables
+    "no-eval": "error" //disallows `eval()` usage
+  }
+}
